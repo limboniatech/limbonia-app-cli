@@ -9,9 +9,6 @@ namespace Limbonia\Traits\Controller;
  * @author Lonnie Blansett <lonnie@limbonia.tech>
  * @package Limbonia
  */
-trait Model
+trait CliModel
 {
-  use \Limbonia\Traits\Controller\BaseModel;
-  use \Limbonia\Traits\Controller\AdminModel;
-  use \Limbonia\Traits\Controller\ApiModel;
 }

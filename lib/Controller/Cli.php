@@ -2,26 +2,26 @@
 namespace Limbonia\Controller;
 
 /**
- * Limbonia Controller base class
+ * Limbonia CLI Controller class
  *
  * This defines all the basic parts of an Limbonia controller
  *
  * @author Lonnie Blansett <lonnie@limbonia.tech>
  * @package Limbonia
  */
-class Api extends Base implements \Limbonia\Interfaces\Controller\Api
+class Api extends Base implements \Limbonia\Interfaces\Controller\Cli
 {
-  use \Limbonia\Traits\Controller\Api;
+  use \Limbonia\Traits\Controller\Cli;
   use \Limbonia\Traits\DriverList;
 
   /**
    * Controller Factory
    *
    * @param string $sType - The type of controller to create
-   * @param \Limbonia\App\Api $oApp
-   * @return \Limbonia\Interfaces\Controller\Api
+   * @param \Limbonia\App\Cli $oApp
+   * @return \Limbonia\Interfaces\Controller\Cli
    */
-  public static function factory($sType, \Limbonia\App\Api $oApp)
+  public static function factory($sType, \Limbonia\App\Cli $oApp)
   {
     return static::driverFactory($sType, $oApp);
   }
@@ -29,10 +29,10 @@ class Api extends Base implements \Limbonia\Interfaces\Controller\Api
   /**
    * Instantiate an API controller
    *
-   * @param \Limbonia\App\Api $oApp
+   * @param \Limbonia\App\Cli $oApp
    * @param \Limbonia\Router $oRouter (optional)
    */
-  protected function __construct(\Limbonia\App\Api $oApp, \Limbonia\Router $oRouter = null)
+  protected function __construct(\Limbonia\App\Cli $oApp, \Limbonia\Router $oRouter = null)
   {
       parent::__construct($oApp, $oRouter);
   }

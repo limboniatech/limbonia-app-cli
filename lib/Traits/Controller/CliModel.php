@@ -11,4 +11,12 @@ namespace Limbonia\Traits\Controller;
  */
 trait CliModel
 {
+  /**
+   * Initialize this controller's custom data, if there is any
+   *
+   * @throws \Limbonia\Exception
+   */
+  protected function cliModelInit()
+  {
+  }
 }

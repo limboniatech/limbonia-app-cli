@@ -245,7 +245,7 @@ Options:\n";
    */
   protected function render()
   {
-    $sControllerDriver = \Limbonia\Controller::driver($this->oRouter->controller);
+    $sControllerDriver = \Limbonia\Controller\Cli::driver($this->oRouter->controller);
 
     if (empty($sControllerDriver))
     {
